@@ -112,7 +112,9 @@ input_data = pd.DataFrame(
 )
 
 st.sidebar.subheader("Current input values")
-st.sidebar.dataframe(input_data.reset_index(drop=True))
+st.sidebar.table(
+    input_data.rename(index={0: ""})
+)
 
 # -----------------------------
 # Prediction
